@@ -1,19 +1,18 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}
 \contentsline {section}{\numberline {1.1}Preface}{2}
 \contentsline {section}{\numberline {1.2}Motivation}{2}
-\contentsline {chapter}{\numberline {2}Defining the Algebraic Structure}{3}
+\contentsline {chapter}{\numberline {2}Finding the Algebraic Structure}{3}
 \contentsline {section}{\numberline {2.1}Defining the Object}{3}
-\contentsline {section}{\numberline {2.2}Making an Algebra}{3}
-\contentsline {section}{\numberline {2.3}The One and Only structure, $\mathbb {Z}_2$}{3}
-\contentsline {section}{\numberline {2.4}A Flashback to Boolean Algebra}{3}
-\contentsline {section}{\numberline {2.5}Linking SZA to Boolean Algebra}{3}
-\contentsline {chapter}{\numberline {3}Building Logic Conjunctions}{4}
-\contentsline {section}{\numberline {3.1}Primitive Conjunctions}{4}
-\contentsline {section}{\numberline {3.2}Composite Conjunctions}{4}
-\contentsline {section}{\numberline {3.3}How To Do Computations}{4}
-\contentsline {subsection}{\numberline {3.3.1}From SZA to Modular Arithmetic}{4}
-\contentsline {subsection}{\numberline {3.3.2}Proofs of given Composite Conjuctions}{4}
-\contentsline {chapter}{\numberline {4}An Application}{5}
-\contentsline {section}{\numberline {4.1}Creating a Low Level Arithmetic Machine}{5}
-\contentsline {subsection}{\numberline {4.1.1}Making a Full Bit Adder}{5}
-\contentsline {subsection}{\numberline {4.1.2}Extending the Machine}{5}
+\contentsline {section}{\numberline {2.2}The One and Only structure, $\mathbb {Z}_2$}{4}
+\contentsline {section}{\numberline {2.3}A Flashback to Boolean Algebra}{4}
+\contentsline {section}{\numberline {2.4}Linking SZA to Boolean Algebra}{4}
+\contentsline {chapter}{\numberline {3}Building Logic Conjunctions}{5}
+\contentsline {section}{\numberline {3.1}Primitive Conjunctions}{5}
+\contentsline {section}{\numberline {3.2}Composite Conjunctions}{5}
+\contentsline {section}{\numberline {3.3}How To Do Computations}{5}
+\contentsline {subsection}{\numberline {3.3.1}From SZA to Modular Arithmetic}{5}
+\contentsline {subsection}{\numberline {3.3.2}Proofs of given Composite Conjuctions}{5}
+\contentsline {chapter}{\numberline {4}An Application}{6}
+\contentsline {section}{\numberline {4.1}Creating a Low Level Arithmetic Machine}{6}
+\contentsline {subsection}{\numberline {4.1.1}Making a Full Bit Adder}{6}
+\contentsline {subsection}{\numberline {4.1.2}Extending the Machine}{6}

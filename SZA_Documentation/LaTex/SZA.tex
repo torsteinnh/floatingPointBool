@@ -7,17 +7,16 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 
-%Defining different formatting for definitions, propsition, etc.
+%Defining different formatting for definitions, proposition, etc.
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[proposition]
+\newtheorem{corollary}{Corollary}[proposition]
+
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
 \theoremstyle{remark}
 \newtheorem*{remark}{Remark}
-
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{lemma}{Lemma}[proposition]
-\newtheorem{corollary}{Corollary}[proposition]
-
 
 %Titles and stuff%
 \title{\Huge SZA :: Signed Zero Algebra \\
@@ -58,14 +57,19 @@
     What thenceforth emerged bore a striking resemblance to Boolean algebra,
     and the expansion and elaboration of said results is the subject of this paper.
 
-\chapter{Defining the Algebraic Structure}
+\chapter{Finding the Algebraic Structure}
   \section{Defining the Object}
-    We will start of by defining all primitive objects. These definitions are a
-    formalisation of how Java interprets the given symbols. foundation for the rest of this paper. \\
+    We will start off by defining all primitive objects. These definitions are a
+    formalisation of how Java interprets the given symbols. We need to define the set
+    which we will perform operations on, and the functions we can apply to this set.
+    We define our set R as the following: \\
 
     \begin{definition}$\ $\\
     R is the set with the elements \{0, -0\} i.e. $R=\{0,-0\}$
     \end{definition}
+
+    With the set it is a natural question to ask what we can do with this set.
+    Java gave us the following functions which acts on the set. We will define:
 
     \begin{definition}$\ $\\
     Let $+, -, \cdot $ be funtions such that $+, -, \cdot : R \times R \rightarrow R,\ \ (a,b) \mapsto a(\bullet)b$. \\ These tables are a description of the complete function for each operation: \\\\
@@ -104,8 +108,35 @@
       \end{minipage}
     \end{definition}
 
-  \section{Making an Algebra}
+    $\ $\\
+    By inspecting the functions given by Java, we can see that they are all binary operations.
+    We can also see that the "-" function is composite of $\cdot$ and + (1). It is also possible
+    to define "-" as a unary operation with $\cdot$ (2).
+    \begin{center}
+      \begin{enumerate}
+      \item $-: R \times R \rightarrow R, (a,b) \mapsto a+(-0\cdot b)$ \\
+      \item $-: R \rightarrow R, a \mapsto -0\cdot a$
+      \end{enumerate}
+    \end{center}
+    In the rest of this paper, we will treat the function - as a unary function in (2).
+
   \section{The One and Only structure, $\mathbb{Z}_2$}
+    In the last section we made a set with two functions acting on that set, namely addition and multiplication; and another function, -, defined with the multiplication function.
+    In other words we can say that we have a set and two binary operations, which awfully looks
+    like a ring. Due to the special circumstances of R, there is only one such ring: $\mathbb{Z}_2$.\\
+    \\
+    The idea for this section of this paper is proving that $(r,\cdot,+)\simeq(\mathbb{Z}_2, +_2, \cdot_2)$. After that isomorphism is stated, the rules and behaviors of the ring should be
+    clarified.
+
+    \begin{proposition}$\ $\\
+      Let $R=\{0, -0\}$, and let + and $\cdot$ be the functions defined in the last section, then
+      $(R,\cdot,+)$ is a ring
+    \end{proposition}
+
+    \begin{lemma}$\ $\\
+      Let R be a set with to binary functions; +, $\cdot$. R is a ring if R is isomorphic with a ring.
+    \end{lemma}
+
   \section{A Flashback to Boolean Algebra}
   \section{Linking SZA to Boolean Algebra}
 
