@@ -7,8 +7,20 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 
+%Defining different formatting for definitions, propsition, etc.
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[proposition]
+\newtheorem{corollary}{Corollary}[proposition]
+
+
 %Titles and stuff%
-\title{\Huge SZA Signed Zero Algebra \\
+\title{\Huge SZA :: Signed Zero Algebra \\
        \Large A New Take On Propositional Logic}
 \author{{Thomas W Thorbjørnsen} \\
         {Eirik Wittersø}\\
@@ -29,6 +41,7 @@
 \tableofcontents
 \newpage
 
+\normalsize
 \chapter{Introduction}
   \section{Preface}
   \section{Motivation}
@@ -47,8 +60,52 @@
 
 \chapter{Defining the Algebraic Structure}
   \section{Defining the Object}
+    We will start of by defining all primitive objects. These definitions are a
+    formalisation of how Java interprets the given symbols. foundation for the rest of this paper. \\
+
+    \begin{definition}$\ $\\
+    R is the set with the elements \{0, -0\} i.e. $R=\{0,-0\}$
+    \end{definition}
+
+    \begin{definition}$\ $\\
+    Let $+, -, \cdot $ be funtions such that $+, -, \cdot : R \times R \rightarrow R,\ \ (a,b) \mapsto a(\bullet)b$. \\ These tables are a description of the complete function for each operation: \\\\
+      \begin{minipage}{0.25\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a+b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & 0 \\ \hline
+            -0 & 0 & 0 \\ \hline
+            -0 & -0 & -0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.25\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a-b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & 0 \\ \hline
+            -0 & 0 & -0 \\ \hline
+            -0 & -0 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.25\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $\cdot$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & -0 \\ \hline
+            -0 & 0 & -0 \\ \hline
+            -0 & -0 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+    \end{definition}
+
   \section{Making an Algebra}
-  \subsection{The One and Only structure, $\mathbb{Z}_2$}
+  \section{The One and Only structure, $\mathbb{Z}_2$}
   \section{A Flashback to Boolean Algebra}
   \section{Linking SZA to Boolean Algebra}
 
@@ -61,7 +118,7 @@
   \section{Composite Conjunctions}
 
   \section{How To Do Computations}
-    \subsection{From SZA to "Normal" Mathematics}
+    \subsection{From SZA to Modular Arithmetic}
     \subsection{Proofs of given Composite Conjuctions}
 
 \newpage
