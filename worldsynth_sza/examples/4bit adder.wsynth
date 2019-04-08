@@ -1,0 +1,805 @@
+<synth>
+	<name>
+		4bit adder
+	</name>
+	<nextdeviceid>
+		25
+	</nextdeviceid>
+	<nextdeviceconnectorid>
+		21
+	</nextdeviceconnectorid>
+	<devices>
+		<device 1>
+			<id>
+				1
+			</id>
+			<name>
+			</name>
+			<x>
+				-88.0
+			</x>
+			<y>
+				119.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaFullAdder
+			</moduleclass>
+			<module>
+				<module "SZA FULL ADDER">
+				</module "SZA FULL ADDER">
+			</module>
+		</device 1>
+		<device 2>
+			<id>
+				2
+			</id>
+			<name>
+			</name>
+			<x>
+				-85.0
+			</x>
+			<y>
+				-31.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaFullAdder
+			</moduleclass>
+			<module>
+				<module "SZA FULL ADDER">
+				</module "SZA FULL ADDER">
+			</module>
+		</device 2>
+		<device 3>
+			<id>
+				3
+			</id>
+			<name>
+			</name>
+			<x>
+				-84.0
+			</x>
+			<y>
+				-173.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaFullAdder
+			</moduleclass>
+			<module>
+				<module "SZA FULL ADDER">
+				</module "SZA FULL ADDER">
+			</module>
+		</device 3>
+		<device 4>
+			<id>
+				4
+			</id>
+			<name>
+			</name>
+			<x>
+				-83.0
+			</x>
+			<y>
+				-301.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaFullAdder
+			</moduleclass>
+			<module>
+				<module "SZA FULL ADDER">
+				</module "SZA FULL ADDER">
+			</module>
+		</device 4>
+		<device 6>
+			<id>
+				6
+			</id>
+			<name>
+			</name>
+			<x>
+				-300.0
+			</x>
+			<y>
+				244.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						c0
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 6>
+		<device 7>
+			<id>
+				7
+			</id>
+			<name>
+			</name>
+			<x>
+				-294.0
+			</x>
+			<y>
+				176.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						b0
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 7>
+		<device 8>
+			<id>
+				8
+			</id>
+			<name>
+			</name>
+			<x>
+				-297.0
+			</x>
+			<y>
+				110.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						a0
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 8>
+		<device 9>
+			<id>
+				9
+			</id>
+			<name>
+			</name>
+			<x>
+				-299.0
+			</x>
+			<y>
+				18.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						b1
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 9>
+		<device 10>
+			<id>
+				10
+			</id>
+			<name>
+			</name>
+			<x>
+				-298.0
+			</x>
+			<y>
+				-47.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						a1
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 10>
+		<device 11>
+			<id>
+				11
+			</id>
+			<name>
+			</name>
+			<x>
+				-300.0
+			</x>
+			<y>
+				-140.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						b2
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 11>
+		<device 12>
+			<id>
+				12
+			</id>
+			<name>
+			</name>
+			<x>
+				-299.0
+			</x>
+			<y>
+				-197.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						a2
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 12>
+		<device 13>
+			<id>
+				13
+			</id>
+			<name>
+			</name>
+			<x>
+				-305.0
+			</x>
+			<y>
+				-291.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						b3
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 13>
+		<device 14>
+			<id>
+				14
+			</id>
+			<name>
+			</name>
+			<x>
+				-304.0
+			</x>
+			<y>
+				-349.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaVariable
+			</moduleclass>
+			<module>
+				<module "SZA VARIABLE">
+					<name>
+						a3
+					</name>
+				</module "SZA VARIABLE">
+			</module>
+		</device 14>
+		<device 16>
+			<id>
+				16
+			</id>
+			<name>
+			</name>
+			<x>
+				140.0
+			</x>
+			<y>
+				-323.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 16>
+		<device 17>
+			<id>
+				17
+			</id>
+			<name>
+			</name>
+			<x>
+				140.0
+			</x>
+			<y>
+				-266.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 17>
+		<device 18>
+			<id>
+				18
+			</id>
+			<name>
+			</name>
+			<x>
+				138.0
+			</x>
+			<y>
+				-186.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 18>
+		<device 19>
+			<id>
+				19
+			</id>
+			<name>
+			</name>
+			<x>
+				135.0
+			</x>
+			<y>
+				-131.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 19>
+		<device 20>
+			<id>
+				20
+			</id>
+			<name>
+			</name>
+			<x>
+				137.0
+			</x>
+			<y>
+				-43.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 20>
+		<device 21>
+			<id>
+				21
+			</id>
+			<name>
+			</name>
+			<x>
+				134.0
+			</x>
+			<y>
+				13.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 21>
+		<device 22>
+			<id>
+				22
+			</id>
+			<name>
+			</name>
+			<x>
+				124.0
+			</x>
+			<y>
+				105.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 22>
+		<device 23>
+			<id>
+				23
+			</id>
+			<name>
+			</name>
+			<x>
+				127.0
+			</x>
+			<y>
+				165.5
+			</y>
+			<bypass>
+				false
+			</bypass>
+			<moduleclass>
+				com.booleanbyte.worldsynth.module.sza.ModuleSzaNoop
+			</moduleclass>
+			<module>
+				<module "SZA NOOP">
+				</module "SZA NOOP">
+			</module>
+		</device 23>
+	</devices>
+	<deviceconnectors>
+		<deviceconnector 1>
+			<outputdeviceid>
+				1
+			</outputdeviceid>
+			<outputdeviceio>
+				co
+			</outputdeviceio>
+			<inputdeviceid>
+				2
+			</inputdeviceid>
+			<inputdeviceio>
+				c
+			</inputdeviceio>
+		</deviceconnector 1>
+		<deviceconnector 2>
+			<outputdeviceid>
+				2
+			</outputdeviceid>
+			<outputdeviceio>
+				co
+			</outputdeviceio>
+			<inputdeviceid>
+				3
+			</inputdeviceid>
+			<inputdeviceio>
+				c
+			</inputdeviceio>
+		</deviceconnector 2>
+		<deviceconnector 3>
+			<outputdeviceid>
+				3
+			</outputdeviceid>
+			<outputdeviceio>
+				co
+			</outputdeviceio>
+			<inputdeviceid>
+				4
+			</inputdeviceid>
+			<inputdeviceio>
+				c
+			</inputdeviceio>
+		</deviceconnector 3>
+		<deviceconnector 4>
+			<outputdeviceid>
+				14
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				4
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 4>
+		<deviceconnector 5>
+			<outputdeviceid>
+				13
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				4
+			</inputdeviceid>
+			<inputdeviceio>
+				b
+			</inputdeviceio>
+		</deviceconnector 5>
+		<deviceconnector 6>
+			<outputdeviceid>
+				12
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				3
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 6>
+		<deviceconnector 7>
+			<outputdeviceid>
+				11
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				3
+			</inputdeviceid>
+			<inputdeviceio>
+				b
+			</inputdeviceio>
+		</deviceconnector 7>
+		<deviceconnector 8>
+			<outputdeviceid>
+				10
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				2
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 8>
+		<deviceconnector 9>
+			<outputdeviceid>
+				9
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				2
+			</inputdeviceid>
+			<inputdeviceio>
+				b
+			</inputdeviceio>
+		</deviceconnector 9>
+		<deviceconnector 10>
+			<outputdeviceid>
+				8
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				1
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 10>
+		<deviceconnector 11>
+			<outputdeviceid>
+				7
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				1
+			</inputdeviceid>
+			<inputdeviceio>
+				b
+			</inputdeviceio>
+		</deviceconnector 11>
+		<deviceconnector 12>
+			<outputdeviceid>
+				6
+			</outputdeviceid>
+			<outputdeviceio>
+				o1
+			</outputdeviceio>
+			<inputdeviceid>
+				1
+			</inputdeviceid>
+			<inputdeviceio>
+				c
+			</inputdeviceio>
+		</deviceconnector 12>
+		<deviceconnector 13>
+			<outputdeviceid>
+				1
+			</outputdeviceid>
+			<outputdeviceio>
+				so
+			</outputdeviceio>
+			<inputdeviceid>
+				22
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 13>
+		<deviceconnector 14>
+			<outputdeviceid>
+				1
+			</outputdeviceid>
+			<outputdeviceio>
+				co
+			</outputdeviceio>
+			<inputdeviceid>
+				23
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 14>
+		<deviceconnector 15>
+			<outputdeviceid>
+				2
+			</outputdeviceid>
+			<outputdeviceio>
+				co
+			</outputdeviceio>
+			<inputdeviceid>
+				21
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 15>
+		<deviceconnector 16>
+			<outputdeviceid>
+				2
+			</outputdeviceid>
+			<outputdeviceio>
+				so
+			</outputdeviceio>
+			<inputdeviceid>
+				20
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 16>
+		<deviceconnector 17>
+			<outputdeviceid>
+				3
+			</outputdeviceid>
+			<outputdeviceio>
+				so
+			</outputdeviceio>
+			<inputdeviceid>
+				18
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 17>
+		<deviceconnector 18>
+			<outputdeviceid>
+				3
+			</outputdeviceid>
+			<outputdeviceio>
+				co
+			</outputdeviceio>
+			<inputdeviceid>
+				19
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 18>
+		<deviceconnector 19>
+			<outputdeviceid>
+				4
+			</outputdeviceid>
+			<outputdeviceio>
+				so
+			</outputdeviceio>
+			<inputdeviceid>
+				16
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 19>
+		<deviceconnector 20>
+			<outputdeviceid>
+				4
+			</outputdeviceid>
+			<outputdeviceio>
+				co
+			</outputdeviceio>
+			<inputdeviceid>
+				17
+			</inputdeviceid>
+			<inputdeviceio>
+				a
+			</inputdeviceio>
+		</deviceconnector 20>
+	</deviceconnectors>
+</synth>
