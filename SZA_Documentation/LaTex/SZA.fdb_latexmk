@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1554676380 "SZA.tex" "SZA.pdf" "SZA" 1554676381
+["pdflatex"] 1554687645 "SZA.tex" "SZA.pdf" "SZA" 1554687746
   "/etc/texmf/web2c/texmf.cnf" 1547979505 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1480098698 1004 54797486969f23fa377b128694d548df ""
@@ -28,6 +28,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb" 1480098733 32362 179c33bbf43f19adbb3825bb4e36e57a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1480098733 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1480098733 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1480098733 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb" 1480098733 36118 fad905eba93cff5bce1e185fe980a177 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1480098734 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1480098815 1458 43ab4710dc82f3edeabecd0d099626b2 ""
@@ -58,11 +59,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1535076666 32752 ce45b90d2fda49befaa367e6f5986072 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1547986852 2885931 54a0ba4e594f83ea336338297f8ab976 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1547986887 4218566 973f07779b39b3f2cc433517ba3f5898 ""
-  "SZA.aux" 1554676380 1916 a9a08cdd4dd9d685e69bb09bbe8ac055 ""
-  "SZA.tex" 1554676380 5966 ded3b1074f29f7d2b7f480712f01f41f ""
-  "SZA.toc" 1554676380 1279 34d36c956cd8b579ec21f6f41c2d05a0 ""
+  "SZA.aux" 1554687645 1916 61d603d9d4def2a120dce008a609bb29 ""
+  "SZA.tex" 1554687745 9279 5027d0b667ad7923295f7b86c462f5ee ""
+  "SZA.toc" 1554687645 1279 91da20173e94523501461f6d6d167ee4 ""
   (generated)
-  "SZA.pdf"
   "SZA.toc"
-  "SZA.log"
   "SZA.aux"
+  "SZA.log"
+  "SZA.pdf"

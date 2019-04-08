@@ -134,8 +134,92 @@
     \end{proposition}
 
     \begin{lemma}$\ $\\
-      Let R be a set with to binary functions; +, $\cdot$. R is a ring if R is isomorphic with a ring.
+      Let S be a set with to binary functions; +, $\cdot$. S is a ring if S is isomorphic with a ring R.
     \end{lemma}
+
+    I will start of by proving Lemma 2.2.1.1, then use that Lemma on R to show that the proposition holds.
+
+    \begin{proof}
+      Let S be a set and +, $\cdot$ be two binary operations on S, then let $(R,+_0,\cdot_0)$ be a ring. Assume $S\simeq R$, this means that $\exists$ a function $\phi:S\rightarrow R$ which is a ring isomorphism. Since $\phi$ is a ringisomorphism $\exists\Phi: \phi\circ\Phi=\Phi\circ\phi=id$.
+      Lets start with showing that $(S,+)$ is an abelian group.
+      \begin{enumerate}
+        \item The identity\\
+              It exists since it exists in R
+        \item Associativity\\
+              $a+(b+c)=\phi(a'+_0 (b'+_0 c'))=\phi((a'+_0 b') +_0 c')=(a+b)+c$
+        \item Inverse\\
+              $0=\phi(0')=\phi(a'+{a^{-1}}')=a+a^{-1}$
+        \item Commutativity\\
+              $a+b=\phi(a'+b')=\phi(b'+a')=b'+a'$
+      \end{enumerate}
+      Now we need to show that $(S*, \cdot)$ is a monoid. This is done in the
+      exactly same way as addition, so the reader can verify this fact for themselves.
+    \end{proof}
+
+    \newpage
+    \begin{proof}
+      In order to prove proposition 2.2.1 we need to find a ringisomorphism
+      $\phi:R\rightarrow\mathbb{Z}_2$. This is done by creating a mapping between R
+      and $\mathbb{Z}_2$. We can easily find this mapping by looking at the operation tables.\\
+
+      \begin{minipage}{206pt}
+        Tables for R
+      \end{minipage}
+      \begin{minipage}{\textwidth}
+        Tables for $\mathbb{Z}_2$
+      \end{minipage}\\
+
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a + b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & 0 \\ \hline
+            -0 & 0 & 0 \\ \hline
+            -0 & -0 & -0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $\cdot$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & -0 \\ \hline
+            -0 & 0 & -0 \\ \hline
+            -0 & -0 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $\cdot_2$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & 1 & 0 \\ \hline
+            1 & 0 & 0 \\ \hline
+            1 & 1 & 1 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $+_2$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & 1 & 1 \\ \hline
+            1 & 0 & 1 \\ \hline
+            1 & 1 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}\\\\
+
+      By looking at these tables we observe that table 1 and 3 are identical if -0
+      gets mapped to 1. The same thing can be said about table 2 and 4. We proceed to
+      define the function $\phi: 0 \mapsto 0, -0 \mapsto 1$. From the tables we observe
+      that addition and multiplication in R respects the axioms for rings, since
+      it is identical to the table for $\mathbb{Z}_2$.
+    \end{proof}
 
   \section{A Flashback to Boolean Algebra}
   \section{Linking SZA to Boolean Algebra}
