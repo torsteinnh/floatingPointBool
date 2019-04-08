@@ -7,6 +7,10 @@
 \usepackage{amsthm}
 \usepackage{amssymb}
 
+%Fixing padding and indents
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\setlength\parindent{0pt}
+
 %Defining different formatting for definitions, proposition, etc.
 \newtheorem{proposition}{Proposition}[section]
 \newtheorem{lemma}{Lemma}[proposition]
@@ -22,16 +26,13 @@
 \title{\Huge SZA :: Signed Zero Algebra \\
        \Large A New Take On Propositional Logic}
 \author{{Thomas W Thorbjørnsen} \\
-        {Eirik Wittersø}\\
-        {Benjamin Benjaminsen}\\
+        {Eirik Wittersø} \\
+        {Benjamin Benjaminsen} \\
         {Torstein Nordgård-Hansen}}
 \date{07.04.2019}
 
 \pagenumbering{arabic}
 
-%Package for fixing padding%
-\usepackage{geometry}
-\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
 
 \begin{document}
 
@@ -118,9 +119,9 @@
       \item $-: R \rightarrow R, a \mapsto -0\cdot a$
       \end{enumerate}
     \end{center}
-    In the rest of this paper, we will treat the function - as a unary function in (2).
-
+    In the rest of this paper, - will be treated as either (1) or (2), if it is not clear from the context what - is it will be stated.
   \section{The One and Only structure, $\mathbb{Z}_2$}
+    \subsection{Proving the Structure}
     In the last section we made a set with two functions acting on that set, namely addition and multiplication; and another function, -, defined with the multiplication function.
     In other words we can say that we have a set and two binary operations, which awfully looks
     like a ring. Due to the special circumstances of R, there is only one such ring: $\mathbb{Z}_2$.\\
@@ -214,23 +215,48 @@
         \end{center}
       \end{minipage}\\\\
 
-      By looking at these tables we observe that table 1 and 3 are identical if -0
-      gets mapped to 1. The same thing can be said about table 2 and 4. We proceed to
-      define the function $\phi: 0 \mapsto 0, -0 \mapsto 1$. From the tables we observe
-      that addition and multiplication in R respects the axioms for rings, since
-      it is identical to the table for $\mathbb{Z}_2$.
+      By looking at these tables we observe that table 1 and 3 are identical if -0 gets mapped to 1. The same thing can be said about table 2 and 4. We proceed to define the function $\phi: 0 \mapsto 0, -0 \mapsto 1$. From the tables we observe that addition and multiplication in R respects the axioms for rings, since it is identical to the table for $\mathbb{Z}_2$.
     \end{proof}
 
-  \section{A Flashback to Boolean Algebra}
-  \section{Linking SZA to Boolean Algebra}
+    \subsection{Identifying the Properties}
+    From this proof of Proposition 2.2.1 we have shown that R is a ring. The most peculiar thing about this ring is that the binary operations don't behave as one would think. Addition in the ring R is equivalent to multiplication in $\mathbb{Z}_2$ and multiplication in R is equivalent to addition in $\mathbb{Z}_2$.
 
+    \begin{remark}$\ $
+      \begin{enumerate}
+        \item \textbf{multiplication is the additive operation}, and\\ \textbf{addition is the multiplicative operation}.
+        \item + has higher precedence than $\cdot$
+      \end{enumerate}
 
+    \end{remark}
+
+    Since + and $\cdot$ have switched places in the ring, things might be a bit confusing. Let's state some identites for the ring R. Assume that $a,b,c \in R$ then:
+    \begin{enumerate}
+      \item $0+a=0$
+      \item $-0+a=a$
+      \item $0\cdot a=a$
+      \item $-0\cdot a =-a$
+      \item $a+a=a$
+      \item $a\cdot a=0$
+      \item $a+(a\cdot b)=a\cdot (a+b) = a-b$
+      \item $a+(b\cdot c)=(a+b) \cdot (b+c)$
+      \item $a\cdot (b+c)$ is irreducible
+    \end{enumerate}
+    \newpage
+
+    \subsection{Discussion}
+    Why is it useful discussing the ring R, when it is equivalent to $\mathbb{Z}_2$. Recall how we first defined R. R is defined simply by how Java interprets the different symbols when parsed. The idea behind this is to make a new bridge between computation and represention in $\mathbb{Z}_2$. If we want to calculate in $\mathbb{Z}_2$ on the computer, we need to tell it that this is another algebraic structure we want to use. This system allows us to simply use the given symbols we use on the paper and promptly put it in the computer.\\
+
+    In the rest of this paper the algebra formed by the ring R will be called for \textbf{SZA}, short for Signed Zero Algebra.\\
+
+    When it comes to applications of SZA it is possible to draw a connection between SZA and Boolean Algebra. By comparing the truth tables for \textbf{addition} and \textbf{multiplication} with the truth tables for OR and XNOR a striking resemblance appear. It is possible to say that they are the same.
+  %\section{A Flashback to Boolean Algebra}
 \newpage
 
-\chapter{Building Logic Conjunctions}
-  \section{Primitive Conjunctions}
+\chapter{Linking SZA to Boolean Algebra}
+  \section{Building Logic Conjunctions}
+    \subsection{Primitive Conjunctions}
 
-  \section{Composite Conjunctions}
+    \subsection{Composite Conjunctions}
 
   \section{How To Do Computations}
     \subsection{From SZA to Modular Arithmetic}

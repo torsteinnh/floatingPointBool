@@ -1,18 +1,20 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {1.1}Preface}{2}
-\contentsline {section}{\numberline {1.2}Motivation}{2}
-\contentsline {chapter}{\numberline {2}Finding the Algebraic Structure}{3}
-\contentsline {section}{\numberline {2.1}Defining the Object}{3}
-\contentsline {section}{\numberline {2.2}The One and Only structure, $\mathbb {Z}_2$}{4}
-\contentsline {section}{\numberline {2.3}A Flashback to Boolean Algebra}{5}
-\contentsline {section}{\numberline {2.4}Linking SZA to Boolean Algebra}{5}
-\contentsline {chapter}{\numberline {3}Building Logic Conjunctions}{6}
-\contentsline {section}{\numberline {3.1}Primitive Conjunctions}{6}
-\contentsline {section}{\numberline {3.2}Composite Conjunctions}{6}
-\contentsline {section}{\numberline {3.3}How To Do Computations}{6}
-\contentsline {subsection}{\numberline {3.3.1}From SZA to Modular Arithmetic}{6}
-\contentsline {subsection}{\numberline {3.3.2}Proofs of given Composite Conjuctions}{6}
-\contentsline {chapter}{\numberline {4}An Application}{7}
-\contentsline {section}{\numberline {4.1}Creating a Low Level Arithmetic Machine}{7}
-\contentsline {subsection}{\numberline {4.1.1}Making a Full Bit Adder}{7}
-\contentsline {subsection}{\numberline {4.1.2}Extending the Machine}{7}
+\contentsline {chapter}{\numberline {1}Introduction}{2}% 
+\contentsline {section}{\numberline {1.1}Preface}{2}% 
+\contentsline {section}{\numberline {1.2}Motivation}{2}% 
+\contentsline {chapter}{\numberline {2}Finding the Algebraic Structure}{3}% 
+\contentsline {section}{\numberline {2.1}Defining the Object}{3}% 
+\contentsline {section}{\numberline {2.2}The One and Only structure, $\mathbb {Z}_2$}{4}% 
+\contentsline {subsection}{\numberline {2.2.1}Proving the Structure}{4}% 
+\contentsline {subsection}{\numberline {2.2.2}Identifying the Properties}{5}% 
+\contentsline {subsection}{\numberline {2.2.3}Discussion}{6}% 
+\contentsline {chapter}{\numberline {3}Linking SZA to Boolean Algebra}{7}% 
+\contentsline {section}{\numberline {3.1}Building Logic Conjunctions}{7}% 
+\contentsline {subsection}{\numberline {3.1.1}Primitive Conjunctions}{7}% 
+\contentsline {subsection}{\numberline {3.1.2}Composite Conjunctions}{7}% 
+\contentsline {section}{\numberline {3.2}How To Do Computations}{7}% 
+\contentsline {subsection}{\numberline {3.2.1}From SZA to Modular Arithmetic}{7}% 
+\contentsline {subsection}{\numberline {3.2.2}Proofs of given Composite Conjuctions}{7}% 
+\contentsline {chapter}{\numberline {4}An Application}{8}% 
+\contentsline {section}{\numberline {4.1}Creating a Low Level Arithmetic Machine}{8}% 
+\contentsline {subsection}{\numberline {4.1.1}Making a Full Bit Adder}{8}% 
+\contentsline {subsection}{\numberline {4.1.2}Extending the Machine}{8}% 
