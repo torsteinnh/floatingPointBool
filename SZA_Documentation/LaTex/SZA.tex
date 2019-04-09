@@ -306,13 +306,50 @@
 
 \chapter{Linking SZA to Boolean Algebra}
   \section{Building Logic Conjunctions}
+    The idea for this chapter is to build a framework for doing Boolean Algebra in SZA. To do that we will firstly define a function:
+
+    \begin{definition}
+      Let R be the ring in SZA. We define the function:\\ $\epsilon: R \rightarrow Bool, 0\mapsto True, -0\mapsto False$
+    \end{definition}
+
+    Observe that this function sends SZA to Boolean values. It might see a bit counterintuitive to send 0 to True, but this allows us to do computations in SZA in a meaningfull manner to Boolean Algebra.
+
     \subsection{Primitive Conjunctions}
+      In the second chapter we discussed the algebraic properties of SZA. We want these binary opartions to form the base for our new version of Boolean Algebra. We define our Primitve Conjuncts as:
+
+      \begin{definition}
+        Let +, $\cdot$ and - be the operations defined in SZA and $a,b\in SZA$ then:
+        \begin{enumerate}
+          \item $a\vee b\equiv a+b$
+          \item $a\odot b\equiv a\cdot b$
+          \item  $\neg a\equiv -a$
+        \end{enumerate}
+      \end{definition}
+
+      We will use these three operations to build up the rest of the logical operations
+
+    \newpage
 
     \subsection{Composite Conjunctions}
+      To get the rest of the gates, we wish to express them in terms of our opartions from SZA. Observe that we only miss the equation for AND, most of the other equations can be written with a - in front of the other terms.
+
+      \begin{proposition}
+        Let +, $\cdot$ and - be the operations from SZA and $a,b\in SZA$, then:
+        \begin{enumerate}
+          \item $a\downarrow b\equiv -(a+b)$
+          \item $a\oplus b\equiv -(a\cdot b)$
+          \item $a\wedge b\equiv (a\cdot b)(a+b)$
+          \item $a\uparrow b\equiv -(a\cdot b)(a+b)$
+          \item $(a\rightarrow b)\equiv b-a$
+          \item $(a\leftrightarrow b)\equiv a\cdot b$
+        \end{enumerate}
+      \end{proposition}
+
+      We will not prove this proposition yet, as we don't have enough tools yet to prove the AND statement. NOR, XOR, NAND, implication and equivalence are left unproven, as they are trivial results stemming from our definition.
 
   \section{How To Do Computations}
     \subsection{From SZA to Modular Arithmetic}
-    \subsection{Proofs of given Composite Conjuctions}
+    \subsection{Proof of "AND"}
 
 \newpage
 
@@ -321,5 +358,9 @@
     \subsection{Making a Full Bit Adder}
 
     \subsection{Extending the Machine}
+
+\newpage
+
+\chapter{implementation of SZA in programming languages}
 
 \end{document}
