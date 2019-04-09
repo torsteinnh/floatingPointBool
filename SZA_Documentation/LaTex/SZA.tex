@@ -248,7 +248,59 @@
 
     In the rest of this paper the algebra formed by the ring R will be called for \textbf{SZA}, short for Signed Zero Algebra.\\
 
-    When it comes to applications of SZA it is possible to draw a connection between SZA and Boolean Algebra. By comparing the truth tables for \textbf{addition} and \textbf{multiplication} with the truth tables for OR and XNOR a striking resemblance appear. It is possible to say that they are the same.
+    When it comes to applications of SZA it is possible to draw a connection between SZA and Boolean Algebra. By comparing the truth tables for \textbf{addition} and \textbf{multiplication} with the truth tables for OR and XNOR a striking resemblance appear. By defining 0 as \textbf{true} and -0 as \textbf{false} the + turns into OR and $\cdot$ turns into XNOR.\\\\\\
+
+    \begin{minipage}{230pt}
+      Tables for SZA
+    \end{minipage}
+    \begin{minipage}{\textwidth}
+      Truth tables
+    \end{minipage}\\
+
+    \begin{minipage}{0.2\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a + b \\ \hline
+          0 & 0 & 0 \\ \hline
+          0 & -0 & 0 \\ \hline
+          -0 & 0 & 0 \\ \hline
+          -0 & -0 & -0 \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a $\cdot$ b \\ \hline
+          0 & 0 & 0 \\ \hline
+          0 & -0 & -0 \\ \hline
+          -0 & 0 & -0 \\ \hline
+          -0 & -0 & 0 \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a OR b \\ \hline
+          T & T & T \\ \hline
+          T & F & T \\ \hline
+          F & T & T \\ \hline
+          F & F & F \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a XNOR b \\ \hline
+          T & T & T \\ \hline
+          T & F & F \\ \hline
+          F & T & F \\ \hline
+          F & F & T \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}\\\\
   %\section{A Flashback to Boolean Algebra}
 \newpage
 
