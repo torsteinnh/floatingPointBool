@@ -1,0 +1,387 @@
+%Making an article and importing unicode%
+\documentclass[12pt]{report}
+\usepackage[utf8x]{inputenc}
+
+%Importing packages for Mathematics%
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+%Fixing padding and indents
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\setlength\parindent{0pt}
+
+%Defining different formatting for definitions, proposition, etc.
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[proposition]
+\newtheorem{corollary}{Corollary}[proposition]
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+%Titles and stuff%
+\title{\Huge SZA :: Signed Zero Algebra \\
+       \Large A New Take On Propositional Logic}
+\author{{Thomas W Thorbjørnsen} \\
+        {Eirik Wittersø} \\
+        {Benjamin Benjaminsen} \\
+        {Torstein Nordgård-Hansen}}
+\date{07.04.2019}
+
+\pagenumbering{arabic}
+
+
+\begin{document}
+
+\maketitle
+\large
+\tableofcontents
+\newpage
+
+\normalsize
+\chapter{Introduction}
+  \section{Preface}
+  \section{Motivation}
+    As one usually does on a Saturday evening,
+    we found ourselves suddenly engrossed in a vivid discussion
+    about the societal value of the number zero.
+    Whilst discussing the differences between null, zero, nil and naught,
+    and their non-evident linguistic difference in Norwegian;
+    a comment was made regarding the existence of both a positive and a negative zero in java.
+    This proposition was by some found preposterous, and prompted an immediate investigation.
+    Upon said investigation, its truthfulness was found evident, further bewildering the doubtful subjects
+    regarding its arithmetical implementation.
+    Addition, subtraction and multiplication was all applied, and the results organized and examined.
+    What thenceforth emerged bore a striking resemblance to Boolean algebra,
+    and the expansion and elaboration of said results is the subject of this paper.
+
+\chapter{Finding the Algebraic Structure}
+  \section{Defining the Object}
+    We will start off by defining all primitive objects. These definitions are a
+    formalisation of how Java interprets the given symbols. We need to define the set
+    which we will perform operations on, and the functions we can apply to this set.
+    We define our set R as the following: \\
+
+    \begin{definition}$\ $\\
+    R is the set with the elements \{0, -0\} i.e. $R=\{0,-0\}$
+    \end{definition}
+
+    With the set it is a natural question to ask what we can do with this set.
+    Java gave us the following functions which acts on the set. We will define:
+
+    \begin{definition}$\ $\\
+    Let $+, -, \cdot $ be funtions such that $+, -, \cdot : R \times R \rightarrow R,\ \ (a,b) \mapsto a(\bullet)b$. \\ These tables are a description of the complete function for each operation: \\\\
+      \begin{minipage}{0.25\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a+b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & 0 \\ \hline
+            -0 & 0 & 0 \\ \hline
+            -0 & -0 & -0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.25\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a-b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & 0 \\ \hline
+            -0 & 0 & -0 \\ \hline
+            -0 & -0 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.25\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $\cdot$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & -0 \\ \hline
+            -0 & 0 & -0 \\ \hline
+            -0 & -0 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+    \end{definition}
+
+    $\ $\\
+    By inspecting the functions given by Java, we can see that they are all binary operations.
+    We can also see that the "-" function is composite of $\cdot$ and + (1). It is also possible
+    to define "-" as a unary operation with $\cdot$ (2).
+    \begin{center}
+      \begin{enumerate}
+      \item $-: R \times R \rightarrow R, (a,b) \mapsto a+(-0\cdot b)$ \\
+      \item $-: R \rightarrow R, a \mapsto -0\cdot a$
+      \end{enumerate}
+    \end{center}
+    In the rest of this paper, - will be treated as either (1) or (2), if it is not clear from the context what - is it will be stated.
+  \section{The One and Only structure, $\mathbb{Z}_2$}
+    \subsection{Proving the Structure}
+    In the last section we made a set with two functions acting on that set, namely addition and multiplication; and another function, -, defined with the multiplication function.
+    In other words we can say that we have a set and two binary operations, which awfully looks
+    like a ring. Due to the special circumstances of R, there is only one such ring: $\mathbb{Z}_2$.\\
+    \\
+    The idea for this section of this paper is proving that $(r,\cdot,+)\simeq(\mathbb{Z}_2, +_2, \cdot_2)$. After that isomorphism is stated, the rules and behaviors of the ring should be
+    clarified.
+
+    \begin{proposition}$\ $\\
+      Let $R=\{0, -0\}$, and let + and $\cdot$ be the functions defined in the last section, then
+      $(R,\cdot,+)$ is a ring
+    \end{proposition}
+
+    \begin{lemma}$\ $\\
+      Let S be a set with to binary functions; +, $\cdot$. S is a ring if S is isomorphic with a ring R.
+    \end{lemma}
+
+    I will start of by proving Lemma 2.2.1.1, then use that Lemma on R to show that the proposition holds.
+
+    \begin{proof}
+      Let S be a set and +, $\cdot$ be two binary operations on S, then let $(R,+_0,\cdot_0)$ be a ring. Assume $S\simeq R$, this means that $\exists$ a function $\phi:S\rightarrow R$ which is a ring isomorphism. Since $\phi$ is a ringisomorphism $\exists\Phi: \phi\circ\Phi=\Phi\circ\phi=id$.
+      Lets start with showing that $(S,+)$ is an abelian group.
+      \begin{enumerate}
+        \item The identity\\
+              It exists since it exists in R
+        \item Associativity\\
+              $a+(b+c)=\phi(a'+_0 (b'+_0 c'))=\phi((a'+_0 b') +_0 c')=(a+b)+c$
+        \item Inverse\\
+              $0=\phi(0')=\phi(a'+{a^{-1}}')=a+a^{-1}$
+        \item Commutativity\\
+              $a+b=\phi(a'+b')=\phi(b'+a')=b'+a'$
+      \end{enumerate}
+      Now we need to show that $(S*, \cdot)$ is a monoid. This is done in the
+      exactly same way as addition, so the reader can verify this fact for themselves.
+    \end{proof}
+
+    \newpage
+    \begin{proof}
+      In order to prove proposition 2.2.1 we need to find a ringisomorphism
+      $\phi:R\rightarrow\mathbb{Z}_2$. This is done by creating a mapping between R
+      and $\mathbb{Z}_2$. We can easily find this mapping by looking at the operation tables.\\
+
+      \begin{minipage}{206pt}
+        Tables for R
+      \end{minipage}
+      \begin{minipage}{\textwidth}
+        Tables for $\mathbb{Z}_2$
+      \end{minipage}\\
+
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a + b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & 0 \\ \hline
+            -0 & 0 & 0 \\ \hline
+            -0 & -0 & -0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $\cdot$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & -0 & -0 \\ \hline
+            -0 & 0 & -0 \\ \hline
+            -0 & -0 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $\cdot_2$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & 1 & 0 \\ \hline
+            1 & 0 & 0 \\ \hline
+            1 & 1 & 1 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}
+      \begin{minipage}{0.2\textwidth}
+        \begin{center}
+          \begin{tabular}{| c | c || c |} \hline
+            a & b & a $+_2$ b \\ \hline
+            0 & 0 & 0 \\ \hline
+            0 & 1 & 1 \\ \hline
+            1 & 0 & 1 \\ \hline
+            1 & 1 & 0 \\ \hline
+          \end{tabular}
+        \end{center}
+      \end{minipage}\\\\
+
+      By looking at these tables we observe that table 1 and 3 are identical if -0 gets mapped to 1. The same thing can be said about table 2 and 4. We proceed to define the function $\phi: 0 \mapsto 0, -0 \mapsto 1$. From the tables we observe that addition and multiplication in R respects the axioms for rings, since it is identical to the table for $\mathbb{Z}_2$.
+    \end{proof}
+
+    \subsection{Identifying the Properties}
+    From this proof of Proposition 2.2.1 we have shown that R is a ring. The most peculiar thing about this ring is that the binary operations don't behave as one would think. Addition in the ring R is equivalent to multiplication in $\mathbb{Z}_2$ and multiplication in R is equivalent to addition in $\mathbb{Z}_2$.
+
+    \begin{remark}$\ $
+      \begin{enumerate}
+        \item \textbf{multiplication is the additive operation}, and\\ \textbf{addition is the multiplicative operation}.
+        \item + has higher precedence than $\cdot$
+      \end{enumerate}
+
+    \end{remark}
+
+    Since + and $\cdot$ have switched places in the ring, things might be a bit confusing. Let's state some identites for the ring R. Assume that $a,b,c \in R$ then:
+    \begin{enumerate}
+      \item $0+a=0$
+      \item $-0+a=a$
+      \item $0\cdot a=a$
+      \item $-0\cdot a =-a$
+      \item $a+a=a$
+      \item $a\cdot a=0$
+      \item $a+(a\cdot b)=a\cdot (a+b) = a-b$
+      \item $a+(b\cdot c)=(a+b) \cdot (b+c)$
+      \item $a\cdot (b+c)$ is irreducible
+    \end{enumerate}
+    \newpage
+
+    \subsection{Discussion}
+    Why is it useful discussing the ring R, when it is equivalent to $\mathbb{Z}_2$. Recall how we first defined R. R is defined simply by how Java interprets the different symbols when parsed. The idea behind this is to make a new bridge between computation and represention in $\mathbb{Z}_2$. If we want to calculate in $\mathbb{Z}_2$ on the computer, we need to tell it that this is another algebraic structure we want to use. This system allows us to simply use the given symbols we use on the paper and promptly put it in the computer.\\
+
+    In the rest of this paper the algebra formed by the ring R will be called for \textbf{SZA}, short for Signed Zero Algebra.\\
+
+    When it comes to applications of SZA it is possible to draw a connection between SZA and Boolean Algebra. By comparing the truth tables for \textbf{addition} and \textbf{multiplication} with the truth tables for OR and XNOR a striking resemblance appear. By defining 0 as \textbf{true} and -0 as \textbf{false} the + turns into OR and $\cdot$ turns into XNOR.\\\\\\
+
+    \begin{minipage}{230pt}
+      Tables for SZA
+    \end{minipage}
+    \begin{minipage}{\textwidth}
+      Truth tables
+    \end{minipage}\\
+
+    \begin{minipage}{0.2\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a + b \\ \hline
+          0 & 0 & 0 \\ \hline
+          0 & -0 & 0 \\ \hline
+          -0 & 0 & 0 \\ \hline
+          -0 & -0 & -0 \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a $\cdot$ b \\ \hline
+          0 & 0 & 0 \\ \hline
+          0 & -0 & -0 \\ \hline
+          -0 & 0 & -0 \\ \hline
+          -0 & -0 & 0 \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a OR b \\ \hline
+          T & T & T \\ \hline
+          T & F & T \\ \hline
+          F & T & T \\ \hline
+          F & F & F \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}
+    \begin{minipage}{0.25\textwidth}
+      \begin{center}
+        \begin{tabular}{| c | c || c |} \hline
+          a & b & a XNOR b \\ \hline
+          T & T & T \\ \hline
+          T & F & F \\ \hline
+          F & T & F \\ \hline
+          F & F & T \\ \hline
+        \end{tabular}
+      \end{center}
+    \end{minipage}\\\\
+  %\section{A Flashback to Boolean Algebra}
+\newpage
+
+\chapter{Linking SZA to Boolean Algebra}
+  \section{Building Logic Conjunctions}
+    The idea for this chapter is to build a framework for doing Boolean Algebra in SZA. To do that we will firstly define a function:
+
+    \begin{definition}
+      Let R be the ring in SZA. We define the function:\\ $\epsilon: R \rightarrow Bool, 0\mapsto True, -0\mapsto False$
+    \end{definition}
+
+    Observe that this function sends SZA to Boolean values. It might see a bit counterintuitive to send 0 to True, but this allows us to do computations in SZA in a meaningfull manner to Boolean Algebra.
+
+    \subsection{Primitive Conjunctions}
+      In the second chapter we discussed the algebraic properties of SZA. We want these binary opartions to form the base for our new version of Boolean Algebra. We define our Primitve Conjuncts as:
+
+      \begin{definition}
+        Let +, $\cdot$ and - be the operations defined in SZA and $a,b\in SZA$ then:
+        \begin{enumerate}
+          \item $a\vee b\equiv a+b$
+          \item $a\odot b\equiv a\cdot b$
+          \item  $\neg a\equiv -a$
+        \end{enumerate}
+      \end{definition}
+
+      We will use these three operations to build up the rest of the logical operations
+
+    \newpage
+
+    \subsection{Composite Conjunctions}
+      To get the rest of the gates, we wish to express them in terms of our opartions from SZA. Observe that we only miss the equation for AND, most of the other equations can be written with a - in front of the other terms.
+
+      \begin{proposition}
+        Let +, $\cdot$ and - be the operations from SZA and $a,b\in SZA$, then:
+        \begin{enumerate}
+          \item $a\downarrow b\equiv -(a+b)$
+          \item $a\oplus b\equiv -(a\cdot b)$
+          \item $a\wedge b\equiv (a\cdot b)(a+b)$
+          \item $a\uparrow b\equiv -(a\cdot b)(a+b)$
+          \item $(a\rightarrow b)\equiv b-a$
+          \item $(a\leftrightarrow b)\equiv a\cdot b$
+        \end{enumerate}
+      \end{proposition}
+
+      We will not prove this proposition yet, as we don't have enough tools yet to prove the AND statement. NOR, XOR, NAND, implication and equivalence are left unproven, as they are trivial results stemming from our definition.
+
+  \section{How To Do Computations}
+    Working in SZA is neither tidy nor intuitive. From now on we will start to use multiplicative notation for multiplication, this means that $a\cdot b = ab$. Observe that we dont need any special additive notations, since the natural notation would be $a+a=2a$, but in SZA $a+a=a$ and this notation would be rendered redundant. The same thing goes for exponents.
+    \subsection{From SZA to Modular Arithmetic}
+      In Chapter 2 it was proved that SZA is a ring by showing an isomorphism with another ring. We will use this isomorphism to make our equations easier to handle.\\
+
+      As a motivational example, our goal for this section is to simplify the equation $-(-a-b)$. In chapter 2 we stated some identites which can be applied, if we try to apply identity 7 following with identity 8 we observe that  $-(-a-b)=-(-a+(-ab))=-((-a)(-a+b))=a(b-a)$. This is where we end. The ninth line tells us that this is irreducible and we cannot simplify this equation any more.\\
+
+      But there is another way to solve this problem, "a change of fields". We want to switch from our ring to $\mathbb{Z}_2$. The notation for the switch is $^{\mathbb{Z}_2}\simeq$ and to switch back we write $^R\simeq$. Recall the function $\phi$ which we used to switch from the ring R to $\mathbb{Z}_2$ is defined by $0\mapsto 0$, $-0\mapsto 1$. With our new notation we can write $\phi$: $R\rightarrow \mathbb{Z}_2$, $0\ ^{\mathbb{Z}_2}\simeq 0$, $-0\ ^{\mathbb{Z}_2}\simeq 1$, and the inverse function $\Phi$: $\mathbb{Z}_2 \rightarrow R$, $0\ ^R\simeq 0$, $1\ ^R\simeq -0$. Note that this notation is a mapping, i.e. NOT AN EQUAL.\\
+
+      This notation is the function $\phi$ but in a disguise. This mean it has all the properties that the function $\phi$ has. $\phi$ has the property that it presever the additive, and the multiplicative operation after it has been called. In our notation we write: $a+b\ ^{\mathbb{Z}_2}\simeq ab$ and $ab\ ^{\mathbb{Z}_2}\simeq a+b$. Note that addition turns into multiplication and vise versa, this means that before we do the switch, all the parantheses need to be in order. Let's give an example:\\\\
+
+      $-(-a-b)=-0((-0a)+(-0b))\ ^{\mathbb{Z}_2}\simeq 1+((1+a)(1+b))=1 +(1+a+b+ab)=a+b+ab \ ^R\simeq ab(a+b)$.\\
+
+      Now we should have enough tools to calculate any equation in SZA.
+
+      \subsubsection{Proof of "AND"}
+        \begin{proposition}
+          Let +, $\cdot $ and - be the operations from SZA and $a,b\in SZA$, then\\ AND $\equiv ab(a+b)$
+        \end{proposition}
+        \begin{proof}
+          In Boolean Algebra we write AND as $a\wedge b$, by applying De Morgan's Law we get:\\
+          $a\wedge b\equiv \neg (\neg a\vee \neg b) \mapsto -(-a-b)$.\\
+          By the example we know that $-(-a-b)=ab(a+b)$
+        \end{proof}
+
+\newpage
+
+\chapter{An Application}
+  \section{Creating a Low Level Arithmetic Machine}
+    \subsection{Making a Full Bit Adder}
+
+    \subsection{Extending the Machine}
+
+\newpage
+
+\chapter{implementation of SZA in programming languages}
+
+\end{document}
