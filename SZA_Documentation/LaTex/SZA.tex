@@ -322,7 +322,7 @@
         \begin{enumerate}
           \item $a\vee b\equiv a+b$
           \item $a\odot b\equiv a\cdot b$
-          \item  $\neg a\equiv -a$
+          \item  $\overline{a}\equiv -a$
         \end{enumerate}
       \end{definition}
 
@@ -336,22 +336,22 @@
       \begin{proposition}
         Let +, $\cdot$ and - be the operations from SZA and $a,b\in SZA$, then:
         \begin{enumerate}
-          \item $a\downarrow b\equiv -(a+b)$
-          \item $a\oplus b\equiv -(a\cdot b)$
-          \item $a\wedge b\equiv (a\cdot b)(a+b)$
-          \item $a\uparrow b\equiv -(a\cdot b)(a+b)$
-          \item $(a\rightarrow b)\equiv b-a$
-          \item $(a\leftrightarrow b)\equiv a\cdot b$
+        \item $a\downarrow b\equiv -(a+b)$
+        \item $a\oplus b\equiv -(a\cdot b)$
+        \item $a\wedge b\equiv (a\cdot b)(a+b)$
+        \item $a\uparrow b\equiv -(a\cdot b)(a+b)$
+        \item $(a\rightarrow b)\equiv b-a$
+        \item $(a\leftrightarrow b)\equiv a\cdot b$
         \end{enumerate}
       \end{proposition}
-
+      
       We will not prove this proposition yet, as we don't have enough tools yet to prove the AND statement. NOR, XOR, NAND, implication and equivalence are left unproven, as they are trivial results stemming from our definition.
-
-  \section{How To Do Computations}
+      
+      \section{How To Do Computations}
     Working in SZA is neither tidy nor intuitive. From now on we will start to use multiplicative notation for multiplication, this means that $a\cdot b = ab$. Observe that we dont need any special additive notations, since the natural notation would be $a+a=2a$, but in SZA $a+a=a$ and this notation would be rendered redundant. The same thing goes for exponents.
     \subsection{From SZA to Modular Arithmetic}
       In Chapter 2 it was proved that SZA is a ring by showing an isomorphism between another ring. We will use this isomorphism to make our equations easier to handle.
-    \subsection{Proof of "AND"}
+      \subsection{Proof of "AND"}
 
 \newpage
 
@@ -366,3 +366,8 @@
 \chapter{implementation of SZA in programming languages}
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
