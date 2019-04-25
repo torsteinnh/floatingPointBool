@@ -350,8 +350,27 @@
       \section{How To Do Computations}
     Working in SZA is neither tidy nor intuitive. From now on we will start to use multiplicative notation for multiplication, this means that $a\cdot b = ab$. Observe that we dont need any special additive notations, since the natural notation would be $a+a=2a$, but in SZA $a+a=a$ and this notation would be rendered redundant. The same thing goes for exponents.
     \subsection{From SZA to Modular Arithmetic}
-      In Chapter 2 it was proved that SZA is a ring by showing an isomorphism between another ring. We will use this isomorphism to make our equations easier to handle.
-      \subsection{Proof of "AND"}
+      In Chapter 2 it was proved that SZA is a ring by showing an isomorphism with another ring. We will use this isomorphism to make our equations easier to handle.\\
+
+      As a motivational example, our goal for this section is to simplify the equation $-(-a-b)$. In chapter 2 we stated some identites which can be applied, if we try to apply identity 7 following with identity 8 we observe that  $-(-a-b)=-(-a+(-ab))=-((-a)(-a+b))=a(b-a)$. This is where we end. The ninth line tells us that this is irreducible and we cannot simplify this equation any more.\\
+
+      But there is another way to solve this problem, "a change of fields". We want to switch from our ring to $\mathbb{Z}_2$. The notation for the switch is $^{\mathbb{Z}_2}\simeq$ and to switch back we write $^R\simeq$. Recall the function $\phi$ which we used to switch from the ring R to $\mathbb{Z}_2$ is defined by $0\mapsto 0$, $-0\mapsto 1$. With our new notation we can write $\phi$: $R\rightarrow \mathbb{Z}_2$, $0\ ^{\mathbb{Z}_2}\simeq 0$, $-0\ ^{\mathbb{Z}_2}\simeq 1$, and the inverse function $\Phi$: $\mathbb{Z}_2 \rightarrow R$, $0\ ^R\simeq 0$, $1\ ^R\simeq -0$. Note that this notation is a mapping, i.e. NOT AN EQUAL.\\
+
+      This notation is the function $\phi$ but in a disguise. This mean it has all the properties that the function $\phi$ has. $\phi$ has the property that it presever the additive, and the multiplicative operation after it has been called. In our notation we write: $a+b\ ^{\mathbb{Z}_2}\simeq ab$ and $ab\ ^{\mathbb{Z}_2}\simeq a+b$. Note that addition turns into multiplication and vise versa, this means that before we do the switch, all the parantheses need to be in order. Let's give an example:\\\\
+
+      $-(-a-b)=-0((-0a)+(-0b))\ ^{\mathbb{Z}_2}\simeq 1+((1+a)(1+b))=1 +(1+a+b+ab)=a+b+ab \ ^R\simeq ab(a+b)$.\\
+
+      Now we should have enough tools to calculate any equation in SZA.
+
+      \subsubsection{Proof of "AND"}
+        \begin{proposition}
+          Let +, $\cdot $ and - be the operations from SZA and $a,b\in SZA$, then\\ AND $\equiv ab(a+b)$
+        \end{proposition}
+        \begin{proof}
+          In Boolean Algebra we write AND as $a\wedge b$, by applying De Morgan's Law we get:\\
+          $a\wedge b\equiv \neg (\neg a\vee \neg b) \mapsto -(-a-b)$.\\
+          By the example we know that $-(-a-b)=ab(a+b)$
+        \end{proof}
 
 \newpage
 
